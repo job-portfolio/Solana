@@ -1,0 +1,42 @@
+{
+  "name": "helloinstruction",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/client/main.ts",
+    "start-with-test-validator": "start-server-and-test 'solana-test-validator --reset --quiet' http://localhost:8899/health start",
+    "lint": "eslint --ext .ts src/client/* && prettier --check \"src/client/**/*.ts\"",
+    "lint:fix": "eslint --ext .ts src/client/* --fix && prettier --write \"src/client/**/*.ts\"",
+    "build:rust": "cargo build-bpf --manifest-path=./src/rust/Cargo.toml --bpf-out-dir=dist/program",
+    "clean:rust": "cargo clean --manifest-path=./src/rust/Cargo.toml && rm -rf ./dist",
+    "test:rust": "cargo test-bpf --manifest-path=./src/program-rust/Cargo.toml",
+    "pretty": "prettier --write '{,src/**/}*.ts'"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.43.4",
+    "@solana/buffer-layout": "4.0.0",
+    "buffer": "6.0.3",
+    "borsh": "^0.7.0",
+    "mz": "^2.7.0",
+    "yaml": "^2.1.1"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/eslint": "^8.4.2",
+    "@types/eslint-plugin-prettier": "^3.1.0",
+    "@types/mz": "^2.7.4",
+    "@types/prettier": "^2.1.5",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
+    "start-server-and-test": "^1.14.0",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
+  }
+}
