@@ -1,0 +1,20 @@
+# ignore all DS_Store files
+**/.DS_Store
+
+# ignore dist folder
+**/dist
+
+# ignore dist folder
+**/target
+
+# ignore test-validator folder
+**/test-ledger
+
+# ignore node_modules folder
+**/node_modules
+
+# ignore redundant developments folder
+**/00 - old
+
+# ignore unfinished projects folder
+**/99 - repo
