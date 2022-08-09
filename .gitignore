@@ -16,5 +16,5 @@
 # ignore redundant developments folder
 **/00 - old
 
-# ignore unfinished projects folder
+# ignore unfinished projects folder 
 **/99 - repo
