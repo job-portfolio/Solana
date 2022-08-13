@@ -14,7 +14,18 @@
 **/node_modules
 
 # ignore redundant developments folder
-**/00 - old
+00 - old
 
 # ignore unfinished projects folder 
-**/99 - repo
+99 - repo
+
+# ignore additional folders
+30 - dApp - Game
+31 - dApp - Transfer
+32 - dApp - Transfer Josh
+40 - Game
+40 - Game backup files
+40 - Game copy 1
+40 - Game copy 2
+50 - Chess Board Game
+
